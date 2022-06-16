@@ -2,13 +2,10 @@ import React, { useState } from 'react'
 
 export default function ListContainer(props) {
   const [newItem, setNewItem] = useState('')
-
-  const { onAddItem } = props
-
+  const { handleAddItem } = props
   const handleSubmit = (e) => {
-    //new item = cheese
     e.preventDefault()
-    onAddItem(newItem) //gives the list item back to app.jsx (to put in the list with the spread operator)
+    handleAddItem(newItem) //gives the list item back to app.jsx (to put in the list with the spread operator)
     setNewItem('')
   }
 
@@ -18,12 +15,13 @@ export default function ListContainer(props) {
         <form onSubmit={handleSubmit}>
           <span>
             <input
-              type="text"
               className="item-input"
+              type="text"
               required
               value={newItem}
               onChange={(e) => {
                 setNewItem(e.target.value)
+                console.log(newItem)
               }}
             ></input>
             <button type="submit" className="add">
