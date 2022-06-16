@@ -21,12 +21,8 @@ function App() {
           <Form handleAddItem={handleAddItem} />
           <div className="list-container">
             <div className="list-item-container">
- delete-button
               {/* shopping item component goes here */}
               <ShoppingItem onClick={handleDelete} shoppingList={list} />
-
-              <ShoppingItem list={list} />
-main
             </div>
           </div>
         </div>

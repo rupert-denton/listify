@@ -1,25 +1,69 @@
+html *
+{
+   font-size: 2rem !important;
+   color: #000 !important;
+   font-family: Arial !important;
+}
+
 body{
   display: flex;
   height: 100vh;
-  background: url(/images/background.png);
+  background-color: lightgrey;;
   justify-content: center;
- 
+
 }
 
+#app{
+  display: flex;
+    width: 70%;
+    border-radius: 2rem;
+    border-style: solid;
+    justify-content: center;
+    background-color: white
+
+}
+
+
+.main{
+  width: 90%;
+}
+.form-container{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
 .page-container{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  background-color: white
 }
 
-.main{
-  width: 90%;
-  background-color: lightgrey;
+
+.list-container{
+  width: 100%;
 }
+
+
+
 
 .list-item{
   display: flex;
   justify-content: center;
   border-bottom-style: solid;
+  justify-content: space-between;
+  padding: 1rem;
+  border-style: solid;
+  margin-bottom: 0.25rem;
+  align-items: center;
 }
 
+.item-input{
+  height: 3rem;
+  font-size:2rem;
+}
+
+.item-name{
+  font-size: 2rem;
+}
