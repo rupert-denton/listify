@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Form from './Form'
-import ShoppingItem from './ShoppingItem'
+import ShoppingList from './ShoppingList'
 
 function App() {
   const [list, setList] = useState([])
@@ -8,9 +8,10 @@ function App() {
   function handleAddItem(newItem) {
     setList([...list, newItem])
   }
-
-  function handleDelete() {
-    const newList = list.filter((x) => x.id !== list.id)
+  // 'cheese'
+  function handleDelete(itemIWantToDelete) {
+    // ['cheese', 'eggs']
+    const newList = list.filter((item) => item !== itemIWantToDelete)
     setList([...newList])
   }
 
@@ -19,12 +20,7 @@ function App() {
       <div className="main">
         <div className="page-container">
           <Form handleAddItem={handleAddItem} />
-          <div className="list-container">
-            <div className="list-item-container">
-              {/* shopping item component goes here */}
-              <ShoppingItem onClick={handleDelete} shoppingList={list} />
-            </div>
-          </div>
+          <ShoppingList onDelete={handleDelete} list={list} />
         </div>
       </div>
     </>

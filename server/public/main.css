@@ -7,10 +7,8 @@ html *
 
 body{
   display: flex;
-  height: 100vh;
   background-color: lightgrey;;
   justify-content: center;
-
 }
 
 #app{
@@ -19,12 +17,14 @@ body{
     border-radius: 2rem;
     border-style: solid;
     justify-content: center;
-    background-color: white
-
+    background-color: white;
+    min-height: 100vh;
 }
+
 .main{
   width: 90%;
 }
+
 .form-container{
   display: flex;
   justify-content: center;

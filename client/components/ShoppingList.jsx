@@ -20,7 +20,6 @@ export default function ShoppingList(props) {
     <>
       <div className="list-container">
         <div className="list-item-container">{list}</div>
-        {props.children}
       </div>
     </>
   )
