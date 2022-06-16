@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Form from './Form'
+import ShoppingItem from './ShoppingItem'
 
 function App() {
-  const [list, setList] = useState(['Eggs'])
+  const [list, setList] = useState([])
 
   function handleAddItem(newItem) {
     setList([...list, newItem])
@@ -20,7 +21,8 @@ function App() {
           <Form onAddItem={handleAddItem} />
           <div className="list-container">
             <div className="list-item-container">
-              <h3>Your List </h3>
+              {/* shopping item component goes here */}
+              <ShoppingItem shoppingList={list} />
             </div>
           </div>
         </div>

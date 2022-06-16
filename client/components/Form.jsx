@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ListContainer() {
+export default function ListContainer(props) {
   const [newItem, setNewItem] = useState('')
 
   const { onAddItem } = props

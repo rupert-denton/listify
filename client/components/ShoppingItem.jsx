@@ -1,13 +1,10 @@
 import React from 'react'
 
-export default function ShoppingItem() {
+export default function ShoppingItem(props) {
   return (
     <>
-      <div className="list-item">
-        <span>Shopping Item 1</span>
-        <span>
-          <button>Delete</button>
-        </span>
+      <div className="list-container">
+        <div className="list-item-container">{props.shoppingList}</div>
       </div>
     </>
   )
