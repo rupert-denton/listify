@@ -9,4 +9,5 @@
 .list-item{
   display: flex;
   justify-content: center;
+  border-bottom-style: solid;
 }

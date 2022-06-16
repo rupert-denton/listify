@@ -16,11 +16,10 @@ function App() {
       </div>
       <div className="main">
         <div className="page-container">
-          <Form onAddItem={handleAddItem} />
+          <Form handleAddItem={handleAddItem} />
           <div className="list-container">
             <div className="list-item-container">
-              {/* shopping item component goes here */}
-              <ShoppingItem shoppingList={list} />
+              <ShoppingItem list={list} />
             </div>
           </div>
         </div>
