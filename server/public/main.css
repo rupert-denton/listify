@@ -1,28 +1,12 @@
-body {
-  background-color: #faf8f1;
-  color: #0a1520;
-  font-family: 'Poppins', sans-serif;
+
+
+.page-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
-.main, .title {
+.list-item{
   display: flex;
-  flex-direction: row;
-}
-
-.title img {
-  height: 5rem;
-  width: 5rem;
-  padding-right: 30px;
-}
-
-.main div {
-  margin: 0px 10px 0px 10px;
-}
-
-a {
-  text-decoration-line: none;
-}
-
-img {
-  max-height: 200px;
+  justify-content: center;
 }
