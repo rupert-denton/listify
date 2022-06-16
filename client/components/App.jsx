@@ -9,6 +9,11 @@ function App() {
     setList([...list, newItem])
   }
 
+  function handleDelete() {
+    const newList = list.filter((x) => x.id !== list.id)
+    setList([...newList])
+  }
+
   return (
     <>
       <div className="title">
@@ -20,7 +25,7 @@ function App() {
           <div className="list-container">
             <div className="list-item-container">
               {/* shopping item component goes here */}
-              <ShoppingItem shoppingList={list} />
+              <ShoppingItem onClick={handleDelete} shoppingList={list} />
             </div>
           </div>
         </div>
