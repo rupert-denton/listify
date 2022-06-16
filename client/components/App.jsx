@@ -14,8 +14,6 @@ function App() {
       <div className="title">
         <h1>Listify your Life!</h1>
       </div>
-
-      {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className="main">
         <div className="page-container">
           <Form onAddItem={handleAddItem} />

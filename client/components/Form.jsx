@@ -17,7 +17,6 @@ export default function ListContainer(props) {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <span>
-            {/* take the value entered in item-input (eg. eggs) */}
             <input
               type="text"
               className="item-input"
@@ -25,11 +24,8 @@ export default function ListContainer(props) {
               value={newItem}
               onChange={(e) => {
                 setNewItem(e.target.value)
-                console.log(newItem)
               }}
             ></input>
-
-            {/* add a click handler here that updates state */}
             <button type="submit" className="add">
               Add
             </button>
