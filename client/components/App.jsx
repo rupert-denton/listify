@@ -1,19 +1,19 @@
 import React from 'react'
-
-import Nav from './Nav'
-import Home from './Home'
+import ListContainer from './ListContainer'
+import Form from './Form'
 
 function App() {
   return (
     <>
       <div className="title">
-        <img src="/images/color_earth.gif" alt="A coloured globe of the earth spinning around on its axis"/>
-        <h1>Navigating the worldwide routes</h1>
+        <h1>Listify your Life!</h1>
       </div>
+
       {/* This 'main' div is only for styling (so we can use flexbox) */}
       <div className="main">
-        <Nav />
-        <Home />
+        <div className="page-container">
+          <ListContainer />
+        </div>
       </div>
     </>
   )
