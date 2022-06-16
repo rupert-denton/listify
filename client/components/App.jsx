@@ -11,9 +11,6 @@ function App() {
 
   return (
     <>
-      <div className="title">
-        <h1>Listify your Life!</h1>
-      </div>
       <div className="main">
         <div className="page-container">
           <Form handleAddItem={handleAddItem} />
