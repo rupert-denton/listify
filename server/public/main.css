@@ -22,7 +22,7 @@ body{
 }
 
 .main{
-  width: 90%;
+  min-width: 90%;
 }
 
 .form-container{
@@ -60,4 +60,20 @@ body{
 
 .item-name{
   font-size: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  html *
+{
+   font-size: 3rem !important;
+   color: #000 !important;
+   font-family: Arial !important;
+}
+  .item-input{
+    height: 5rem;
+  }
+
+  #app{
+    min-width: 90%;
+  }
 }
