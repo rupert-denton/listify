@@ -12,7 +12,7 @@
     "server": "node server",
     "test": "jest --watch --noStackTrace",
     "lint": "eslint --ext .js,.jsx .",
-    "build": "webpack -- --mode production"
+    "build": "webpack --mode production"
   },
   "babel": {
     "presets": [
