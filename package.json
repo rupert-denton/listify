@@ -8,12 +8,13 @@
     "start": "node",
     "dev": "run-p client server",
     "webpack": "webpack --config client/webpack.config.js",
+    "build": "webpack",
     "client": "npm run webpack -- --watch",
     "server": "node server",
     "test": "jest --watch --noStackTrace",
-    "lint": "eslint --ext .js,.jsx .",
-    "build": "webpack"
+    "lint": "eslint --ext .js,.jsx ."
   },
+
   "babel": {
     "presets": [
       "@babel/preset-env",
