@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export default function ListContainer(props) {
   const [newItem, setNewItem] = useState('')
   const { handleAddItem } = props
+
   const handleSubmit = (e) => {
     e.preventDefault()
     handleAddItem(newItem) //gives the list item back to app.jsx (to put in the list with the spread operator)
@@ -21,7 +22,6 @@ export default function ListContainer(props) {
               value={newItem}
               onChange={(e) => {
                 setNewItem(e.target.value)
-                console.log(newItem)
               }}
             ></input>
             <button type="submit" className="add">

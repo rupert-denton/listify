@@ -7,8 +7,9 @@ html *
 
 body{
   display: flex;
-  background-color: lightgrey;;
+  /* background-color: lightgrey;; */
   justify-content: center;
+  background: url(/images/background.png);
 }
 
 #app{

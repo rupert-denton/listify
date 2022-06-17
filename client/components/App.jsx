@@ -6,13 +6,17 @@ function App() {
   const [list, setList] = useState([])
 
   function handleAddItem(newItem) {
-    setList([...list, newItem])
+    setList([...list, { name: newItem, isActive: false }])
   }
-  // 'cheese'
+
   function handleDelete(itemIWantToDelete) {
-    // ['cheese', 'eggs']
-    const newList = list.filter((item) => item !== itemIWantToDelete)
-    setList([...newList])
+    console.log(itemIWantToDelete)
+    const newList = list.filter((item) => item.name !== itemIWantToDelete)
+    setList(newList)
+  }
+
+  function handleListChange(newList) {
+    setList(newList)
   }
 
   return (
@@ -20,7 +24,11 @@ function App() {
       <div className="main">
         <div className="page-container">
           <Form handleAddItem={handleAddItem} />
-          <ShoppingList onDelete={handleDelete} list={list} />
+          <ShoppingList
+            onDelete={handleDelete}
+            list={list}
+            onListChange={handleListChange}
+          />
         </div>
       </div>
     </>
