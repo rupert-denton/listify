@@ -1,14 +1,14 @@
 import React from 'react'
-import useFetch from './useFetch'
-
-const { data } = useFetch(`https://pokeapi.co/api/v2/pokemon/cubone`)
+import useFetch from '../useFetch'
 
 const Modal = (props) => {
+  const pokemonName = 'raichu'
+  const { data } = useFetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+  console.log(data)
+
   if (!props.show) {
     return null
   }
-
-  
 
   return (
     <div className="modal">
@@ -31,6 +31,7 @@ const Modal = (props) => {
                 {/* pokemon image to go in here */}
               </div>
             </div>
+            <div className="pokemon-name">{data.name}</div>
           </div>
           <div className="pokedex-bottom">
             <div className="first-third a">
