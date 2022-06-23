@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 
+//component imports
+import Modal from './Modal'
+
 let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
 
 export default function ShoppingList(props) {
-  console.log(props.list)
+  const [show, setShow] = useState(false)
+
   const handleClick = (name, e) => {
     const currentListItem = props.list.find((item) => item.name === name)
 
@@ -31,8 +35,18 @@ export default function ShoppingList(props) {
           <span>{listItem.name}</span>
         </div>
         <span>
-          <button onClick={() => props.onDelete(listItem.name)}>x</button>
+          <button onClick={() => props.onDelete(listItem.name)}>X</button>
         </span>
+
+        <div>
+          <img
+            className="pokedex-icon"
+            alt="icon of a pokedex"
+            src="/images/pokedex-icon.jpg"
+            onClick={() => setShow(true)}
+          />
+          <Modal onClose={() => setShow(false)} show={show} />
+        </div>
       </div>
     )
   })
@@ -45,5 +59,3 @@ export default function ShoppingList(props) {
     </>
   )
 }
-
-// style='color:red;text-decoration:line-through

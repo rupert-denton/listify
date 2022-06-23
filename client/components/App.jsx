@@ -23,7 +23,7 @@ function App() {
     <>
       <div className="main">
         <div className="page-container">
-          <h1 className="heading">Listify</h1>
+          <h1 className="heading">Thought for Food</h1>
           <Form handleAddItem={handleAddItem} />
           <ShoppingList
             onDelete={handleDelete}
