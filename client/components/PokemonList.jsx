@@ -7,6 +7,7 @@ let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
 
 export default function ShoppingList(props) {
   const [show, setShow] = useState(false)
+  const [pokemonName, setPokemonName] = useState('')
 
   const handleClick = (name, e) => {
     const currentListItem = props.list.find((item) => item.name === name)
@@ -17,6 +18,11 @@ export default function ShoppingList(props) {
     const newList = [...props.list]
     newList[indexOfListItem] = currentListItem
     props.onListChange(newList)
+  }
+
+  const handlePokedexClick = (listItem) => {
+    setShow(true)
+    setPokemonName(listItem.name.toLowerCase())
   }
 
   const list = props.list.map((listItem, id) => {
@@ -43,10 +49,10 @@ export default function ShoppingList(props) {
             className="pokedex-icon"
             alt="icon of a pokedex"
             src="/images/pokedex-icon.jpg"
-            onClick={() => setShow(true)}
+            onClick={() => handlePokedexClick(listItem)}
           />
           <Modal
-            pokemonName={listItem.name.toLowerCase()}
+            pokemonName={pokemonName}
             onClose={() => setShow(false)}
             show={show}
           />
