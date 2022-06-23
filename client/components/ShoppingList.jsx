@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+//component imports
+import Modal from './Modal'
+
 let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
 
 export default function ShoppingList(props) {
@@ -30,7 +33,8 @@ export default function ShoppingList(props) {
         >
           <span>{listItem.name}</span>
           <span>
-            <button onClick={() => props.onDelete(listItem.name)}>?</button>
+            <button>Info</button>
+            <Modal />
           </span>
         </div>
         <span>
