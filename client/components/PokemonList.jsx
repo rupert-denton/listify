@@ -45,7 +45,11 @@ export default function ShoppingList(props) {
             src="/images/pokedex-icon.jpg"
             onClick={() => setShow(true)}
           />
-          <Modal onClose={() => setShow(false)} show={show} />
+          <Modal
+            pokemonName={listItem.name.toLowerCase()}
+            onClose={() => setShow(false)}
+            show={show}
+          />
         </div>
       </div>
     )

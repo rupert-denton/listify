@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import useFetch from '../useFetch'
 
 const Modal = (props) => {
-  const pokemonName = 'raichu'
+  const [pokemonName, setPokemonName] = useState('')
+  useEffect(() => {
+    setPokemonName(props.pokemonName)
+  }, [props.pokemonName])
+
   const { data } = useFetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
   console.log(data)
 
