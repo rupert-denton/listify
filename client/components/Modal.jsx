@@ -61,30 +61,32 @@ const Modal = (props) => {
           {/* Blank top bar */}
           <div className="empty-top-bar"></div>
           {/* Stat screen */}
-          <div className="stat-screen-container">
-            <div id="stat-screen" className="stat-screen">
-              <p>Height</p> {/* to include data from API */}
-              <p>Weight</p> {/* to include data from API */}
+          <div className="mid-stat-buttons">
+            <div className="stat-screen-container">
+              <div id="stat-screen" className="stat-screen">
+                <p>Height</p> {/* to include data from API */}
+                <p>Weight</p> {/* to include data from API */}
+              </div>
             </div>
-          </div>
-          {/* Square buttons */}
-          <div className="square-buttons-container">
-            <div className="ability-buttons-container">
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
-              <div className="ability-button"></div>
+            {/* Square buttons */}
+            <div className="square-buttons-container">
+              <div className="ability-buttons-container">
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+                <div className="ability-button"></div>
+              </div>
             </div>
           </div>
           {/* Center buttons */}
-          <div className="center-buttons-container">
-            <div className="center-left-container">
+          <div className="lower-buttons-container">
+            <div className="lower-left-container">
               <div className="red-dots-container">
                 <div className="red-dot">
                   <div className="small-light-red"></div>
@@ -93,12 +95,23 @@ const Modal = (props) => {
                   <div className="small-light-red"></div>
                 </div>
               </div>
-              <div className="white-square-container"></div>
+              <div className="white-squares-container">
+                <div className="white-square"></div>
+                <div className="white-square"></div>
+              </div>
             </div>
-            <div className="center-right-container"></div>
+            <div className="lower-right-container">
+              <div className="grey-buttons-container">
+                <div className="grey-button"></div>
+                <div className="grey-button"></div>
+              </div>
+              <div className="yellow-button"></div>
+            </div>
           </div>
-          {/*  */}
-          <div className=""></div>
+          {/* Bottom screen container */}
+          <div className="bottom-screen-container">
+            <div>asdasdasd</div>
+          </div>
         </div>
       </div>
     </div>
