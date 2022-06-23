@@ -1,9 +1,14 @@
 import React from 'react'
+import useFetch from './useFetch'
+
+const { data } = useFetch(`https://pokeapi.co/api/v2/pokemon/cubone`)
 
 const Modal = (props) => {
   if (!props.show) {
     return null
   }
+
+  
 
   return (
     <div className="modal">
