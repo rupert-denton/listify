@@ -6,7 +6,8 @@ import Modal from './Modal'
 let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
 
 export default function ShoppingList(props) {
-  console.log(props.list)
+  const [show, setShow] = useState(false)
+
   const handleClick = (name, e) => {
     const currentListItem = props.list.find((item) => item.name === name)
 
@@ -34,8 +35,8 @@ export default function ShoppingList(props) {
           <span>{listItem.name}</span>
         </div>
         <span>
-          <button>Info</button>
-          <Modal />
+          <button onClick={() => setShow(true)}>Info</button>
+          <Modal show={show} />
         </span>
         <span>
           <button onClick={() => props.onDelete(listItem.name)}>x</button>
