@@ -29,6 +29,9 @@ export default function ShoppingList(props) {
           }
         >
           <span>{listItem.name}</span>
+          <span>
+            <button onClick={() => props.onDelete(listItem.name)}>?</button>
+          </span>
         </div>
         <span>
           <button onClick={() => props.onDelete(listItem.name)}>x</button>
