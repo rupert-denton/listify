@@ -36,7 +36,7 @@ export default function ShoppingList(props) {
         </div>
         <span>
           <button onClick={() => setShow(true)}>Info</button>
-          <Modal show={show} />
+          <Modal onClose={() => setShow(false)} show={show} />
         </span>
         <span>
           <button onClick={() => props.onDelete(listItem.name)}>x</button>

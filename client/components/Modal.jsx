@@ -10,9 +10,11 @@ const Modal = (props) => {
       <div className="modal-content">
         <h4 className="modal-title">Modal title</h4>
       </div>
-      <div className="modal-body">this is modal content</div>
+      <div className="modal-body">This is modal content</div>
       <div className="modal-footer">
-        <button className="button">close</button>
+        <button onClick={props.onClose} className="button">
+          Close
+        </button>
       </div>
     </div>
   )
