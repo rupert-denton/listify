@@ -35,12 +35,13 @@ export default function ShoppingList(props) {
           <span>{listItem.name}</span>
         </div>
         <span>
+          <button onClick={() => props.onDelete(listItem.name)}>X</button>
+        </span>
+
+        <div>
           <button onClick={() => setShow(true)}>Info</button>
           <Modal onClose={() => setShow(false)} show={show} />
-        </span>
-        <span>
-          <button onClick={() => props.onDelete(listItem.name)}>x</button>
-        </span>
+        </div>
       </div>
     )
   })
@@ -53,5 +54,3 @@ export default function ShoppingList(props) {
     </>
   )
 }
-
-// style='color:red;text-decoration:line-through
