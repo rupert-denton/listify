@@ -32,11 +32,11 @@ export default function ShoppingList(props) {
           }
         >
           <span>{listItem.name}</span>
-          <span>
-            <button>Info</button>
-            <Modal />
-          </span>
         </div>
+        <span>
+          <button>Info</button>
+          <Modal />
+        </span>
         <span>
           <button onClick={() => props.onDelete(listItem.name)}>x</button>
         </span>
