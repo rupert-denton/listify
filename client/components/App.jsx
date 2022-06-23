@@ -3,7 +3,9 @@ import Form from './Form'
 import ShoppingList from './ShoppingList'
 
 function App() {
+
   const [list, setList] = useState([])
+ 
 
   function handleAddItem(newItem) {
     setList([...list, { name: newItem, isActive: false }])
