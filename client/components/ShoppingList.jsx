@@ -39,7 +39,12 @@ export default function ShoppingList(props) {
         </span>
 
         <div>
-          <button onClick={() => setShow(true)}>Info</button>
+          <img
+            className="pokedex-icon"
+            alt="icon of a pokedex"
+            src="/images/pokedex-icon.jpg"
+            onClick={() => setShow(true)}
+          />
           <Modal onClose={() => setShow(false)} show={show} />
         </div>
       </div>

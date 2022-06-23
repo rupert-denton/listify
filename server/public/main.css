@@ -45,12 +45,18 @@ button:hover{
 body{
   display: flex;
   justify-content: center;
-  background: url(/images/background.png);
-}
+  background: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/coast.jpg);
+   no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 
 #app{
   display: flex;
-    width: 90%;
+    width: 70%;
     border-radius: 2rem;
     border-style: solid;
     justify-content: center;
@@ -100,6 +106,7 @@ form{
   justify-content: center;
   border-bottom-style: solid;
   justify-content: space-between;
+  border-radius: 1rem;
   padding: 1rem;
   border-style: solid;
   margin-bottom: 0.25rem;
@@ -121,16 +128,26 @@ form{
   font-size: 5rem;
 }
 
+.pokedex-icon{
+  height: 6rem;
+}
+
+.pokedex-icon:hover{
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: gray;
+  cursor: pointer;
+}
+
 .pokedex-container{
   background-color: #ff0066;
   border-radius: 1.5rem;
-
   height: 90%;
   width: 60%;
   display: grid;
   grid-template-columns: 1fr .1fr 1fr;
   border-style: solid;
-    border-width: thick;
+  border-width: thick;
 }
 
 .pokedex-hinge{
