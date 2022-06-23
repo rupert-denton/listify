@@ -9,6 +9,7 @@ export default function ShoppingList(props) {
 
     const indexOfListItem = props.list.indexOf(currentListItem)
     currentListItem.isActive = !currentListItem.isActive
+
     const newList = [...props.list]
     newList[indexOfListItem] = currentListItem
     props.onListChange(newList)
