@@ -210,6 +210,7 @@ background-color: #32cb65;
   height: 45%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -359,6 +360,14 @@ background-color: #32cb65;
   justify-content: center;
   text-align: left;
   line-height: 2;
+}
+
+.stat {
+  display: flex;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
 }
 
 .square-buttons-container {
