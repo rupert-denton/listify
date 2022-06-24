@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react'
 import useFetch from '../useFetch'
 
 const Modal = (props) => {
-  console.log(props.pokemonName)
+  const [pokemonImg, setPokemonImg] = useState('')
 
   const { data } = useFetch(
     `https://pokeapi.co/api/v2/pokemon/${props.pokemonName}`
   )
-  console.log(data)
+
+  const imageSrc = data.sprites?.front_default
+
+  useEffect(() => {
+    setPokemonImg(imageSrc)
+  }, [data])
 
   if (!props.show) {
     return null
@@ -30,7 +35,11 @@ const Modal = (props) => {
           <div className="pokedex-mid">
             <div className="screen-container">
               <div className="screen">
-                <img src="images/cubone.jpeg" className="image-body" />
+                <img
+                  src={pokemonImg}
+                  alt="get Pokemon"
+                  className="image-body"
+                />
                 {/* pokemon image to go in here */}
               </div>
             </div>
@@ -73,8 +82,10 @@ const Modal = (props) => {
           <div className="mid-stat-buttons">
             <div className="stat-screen-container">
               <div id="stat-screen" className="stat-screen">
-                <p>Height</p> {/* to include data from API */}
-                <p>Weight</p> {/* to include data from API */}
+                <div>
+                  <p className="stat">Height:{data.height}</p>
+                  <p className="stat">Weight:{data.weight}</p>
+                </div>
               </div>
             </div>
             {/* Square buttons */}
@@ -119,7 +130,7 @@ const Modal = (props) => {
           </div>
           {/* Bottom screen container */}
           <div className="bottom-screen-container">
-            <div>asdasdasd</div>
+            <div>Footer</div>
           </div>
         </div>
       </div>
